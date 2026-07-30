@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function UserProfileCard({ user }) {
   const [messageCount, setMessageCount] = useState(0);
+  const [isFavorited, setIsFavorited] = useState(false);
 
   function handleSendMessage() {
     setMessageCount(messageCount + 1);
@@ -9,6 +10,10 @@ function UserProfileCard({ user }) {
 
   function handleReset() {
     setMessageCount(0);
+  }
+
+  function handleToggleFavorite() {
+    setIsFavorited((prev) => !prev);
   }
 
   return (
@@ -36,6 +41,12 @@ function UserProfileCard({ user }) {
 
         <button onClick={handleSendMessage}>Send Message</button>
         <button onClick={handleReset}>Reset</button>
+
+        {user.isOnline && (
+          <button onClick={handleToggleFavorite}>
+            {isFavorited ? "★ Favorited" : "☆ Favorite"}
+          </button>
+        )}
       </div>
       <p className="footer">Card last updated: {user.lastUpdated}</p>
     </>
