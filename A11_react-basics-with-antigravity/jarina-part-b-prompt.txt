@@ -1,0 +1,1 @@
+Analyze the @src\App.css @src\components\tracks\SongList.css styling and apply the style of Spotify App. I want it to look like a mobile playlist. Don't add new files, just new styling.
