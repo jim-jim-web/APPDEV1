@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transformers - Teletraan-1 Terminal</title>
+</head>
+<body>
+  <h1>Teletraan-1 Defense System</h1>
+
+  <!-- Inline script -->
+  <script>
+    console.log("Teletraan-1: Inline boot script initiated.");
+  </script>
+
+  <!-- ES module script -->
+  <script type="module">
+    import greetCybertron, { botInfo } from "./15_modules_export.js";
+    console.log(greetCybertron());
+    console.log(`Active Unit: ${botInfo.name} | Faction: ${botInfo.faction}`);
+  </script>
+</body>
+</html>
