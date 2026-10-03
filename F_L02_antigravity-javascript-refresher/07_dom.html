@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cybertron Command Hub</title>
+</head>
+<body>
+  <h1>Cybertron Mainframe Interface</h1>
+  <button id="themeBtn">Change Base Color Scheme</button>
+  <p id="statusMsg">Teletraan-1 scanning sector...</p>
+
+  <script>
+    const button = document.getElementById("themeBtn");
+    button.addEventListener("click", () => {
+      const color = prompt("Enter Cybertron base background color (e.g. #1a1a2e or darkblue):");
+      if (color) {
+        document.body.style.backgroundColor = color;
+      }
+    });
+
+    const statusMsg = document.getElementById("statusMsg");
+    setTimeout(() => {
+      statusMsg.textContent = "Teletraan-1 Alert: Decepticon signature detected in Sector 4!";
+    }, 2000);
+  </script>
+</body>
+</html>
