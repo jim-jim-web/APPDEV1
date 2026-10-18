@@ -1,9 +1,17 @@
-import Login from "./components/Login";
+import { useState } from "react";
+import Login from "./components/login/Login";
+import Signup from "./components/signup/Signup";
 
 function App() {
+  const [currentScreen, setCurrentScreen] = useState("login"); // Starts with login
+
   return (
     <>
-      <Login />
+      {currentScreen === "login" ? (
+        <Login onSwitchToSignup={() => setCurrentScreen("signup")} />
+      ) : (
+        <Signup onSwitchToLogin={() => setCurrentScreen("login")} />
+      )}
     </>
   );
 }

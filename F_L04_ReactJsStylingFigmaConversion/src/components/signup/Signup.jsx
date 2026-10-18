@@ -1,7 +1,7 @@
 import styles from "./Signup.module.css";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 
-export default function Signup() {
+export default function Signup({ onSwitchToLogin }) {
     return (
         <div className={styles.signupContainer}>
             {/* ---------- Left panel (Consistent with Login) ---------- */}
@@ -42,7 +42,16 @@ export default function Signup() {
                     <button className={styles.submitBtn}>Create Account</button>
 
                     <p className={styles.loginFooter}>
-                        Already have an account? <a href="#">Login</a>
+                        Already have an account?{" "}
+                        <a 
+                            href="#" 
+                            onClick={(e) => { 
+                                e.preventDefault(); 
+                                onSwitchToLogin(); 
+                            }}
+                        >
+                            Login
+                        </a>
                     </p>
                 </div>
             </section>
