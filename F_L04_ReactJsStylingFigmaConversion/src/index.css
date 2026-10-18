@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: Montserrat, sans-serif;
+  font-family: var(--font-main);
   font-size: 16px;
   color: var(--text-dark);
   background: var(--primary-color);

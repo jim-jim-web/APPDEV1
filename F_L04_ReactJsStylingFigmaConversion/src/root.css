@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #5b86e5;
+  --bg-login: #a9c0f0;
+  --bg-white: #ffffff;
+  --text-dark: #333333;
+  --text-gray: #9a9a9a;
+  --font-main: "Montserrat", sans-serif;
+  --border-radius: 8px;
+  --container-radius: 60px;
+}
