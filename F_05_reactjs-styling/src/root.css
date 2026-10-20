@@ -1,0 +1,18 @@
+:root {
+  /* Colors */
+  --color-primary: #52717d;
+  --color-primary-hover: #415b65;
+  --color-text-dark: #37474f;
+  --color-text-muted: #78909c;
+  --color-border: #90a4ae;
+  --color-white: #ffffff;
+  --color-bg-page: #f4f6f8;
+
+  /* Typography */
+  --font-main: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Shapes & Layout */
+  --radius-card: 24px;
+  --radius-panel: 20px;
+  --radius-button: 6px;
+}

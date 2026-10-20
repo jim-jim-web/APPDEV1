@@ -1,0 +1,166 @@
+.loginCard {
+  display: flex;
+  width: 820px;
+  max-width: 95vw;
+  height: 500px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+}
+
+/* Left Image Panel */
+.leftPanel {
+  width: 45%;
+  height: 100%;
+  border-top-left-radius: var(--radius-card);
+  border-bottom-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+  border-bottom-right-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Form Area - Default items to the left */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Aligns child elements to the left by default */
+  padding: 40px;
+  text-align: left;
+}
+
+.heading {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.headingSpan {
+  color: var(--color-text-dark);
+  font-weight: 400;
+}
+
+/* Navigation Tabs - Explicitly centered using align-self */
+.tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 30px;
+  align-self: center; /* Centers only the tabs block in the middle of the panel */
+}
+
+.tabActive {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 4px;
+}
+
+.tabInactive {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b0bec5;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.inputField {
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 8px 0;
+  font-size: 0.95rem;
+  outline: none;
+  color: var(--color-text-dark);
+  width: 100%;
+}
+
+.inputField::placeholder {
+  color: var(--color-text-muted);
+}
+
+.inputField:focus {
+  border-bottom-color: var(--color-primary);
+}
+
+.submitBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 12px;
+  border-radius: 0; /* No radius */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Divider & Social Icons */
+.divider {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: 16px 0 12px 0;
+  width: 100%;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .loginCard {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .leftPanel {
+    display: none;
+  }
+
+  .rightPanel {
+    padding: 30px 20px;
+    align-items: center; /* Center everything on mobile screens */
+    text-align: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+}
